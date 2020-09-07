@@ -1,16 +1,18 @@
 import React from 'react'
-function Cards(){
+
+function Card(props){
     return( <div className="cards">
     <div className="card">
-      <img src="https://f4.bcbits.com/img/a2164492178_10.jpg" alt="pic" className="card_img"/>
+      <img src={props.imgsrc} alt="pic" className="card_img"/>
       <div className="card_info">
-        <span className="card_category"></span>
-        <h3 className="card_title"></h3>
+        <span className="card_category">{props.title}</span>
+        <h3 className="card_title">{props.sname}</h3>
         <a href="#" target="_blank">
           <button>Watch Now</button>
         </a>
       </div>
     </div>
   </div>)
-}
-export default Cards;
+  }
+
+  export default Card;
